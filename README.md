@@ -48,6 +48,13 @@ If you want to share a folder with the
 `docker run --name container001 -it -v /Users/icrucrob/Documents/Docker/test/app:/app image001:latest`
 Here `-v /Users/icrucrob/Documents/Docker/test/app:/app` provides the `host:container` folders to share.
 
+If you want to specify RAM and CPU
+`docker run -it --memory="4g" --cpus="2" your_image_name`
+
+My recommendation is the following for an M3 processor on a mac silicon
+`docker run --memory="32g" --cpus="12" --name container001 -it -v /Users/icrucrob/Documents/Docker/test/app:/app image001:latest`
+
+
 Type exit to quit the container
 
 ## Show existing containers
