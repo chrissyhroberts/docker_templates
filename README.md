@@ -83,5 +83,7 @@ docker exec -it container001 /bin/zsh
 `docker ps -a` lists all containers
 `docker rm [container]` removes the container
  
-## 
+## NOTE
+For doing stuff with AI on Docker, you'll probably need to look at the `preferences/resources` settings on Docker Desktop. This needs a fair whack of resources. 
+
 
