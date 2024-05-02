@@ -1,0 +1,30 @@
+# Use an official Python 3.9 image as the base
+FROM python:3.9
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Install system packages
+RUN apt-get update && apt-get install -y \
+    zsh \
+    nano \
+    libhdf5-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Oh My Zsh
+RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
+RUN pip install --upgrade pip
+# Install Python packages
+RUN pip install --no-cache-dir tensorflow 
+RUN pip install --no-cache-dir keras
+# Copy the rest of your application's code
+#COPY . .
+
+# Set zsh as the default shell
+SHELL ["/bin/zsh", "-c"]
+
+# Set zsh as the default shell
+SHELL ["/bin/zsh", "-c"]
+
+# Command to run on container start
+CMD ["/bin/zsh"]

@@ -1,0 +1,8 @@
+version: '3.9'
+services:
+  myapp:
+    build: .
+    volumes:
+      - /Users/icrucrob/Documents/Docker/test:/app
+    ports:
+      - "5000:5000"  # Example if you need to expose port 5000
