@@ -87,3 +87,5 @@ docker exec -it container001 /bin/zsh
 For doing stuff with AI on Docker, you'll probably need to look at the `preferences/resources` settings on Docker Desktop. This needs a fair whack of resources. 
 
 
+## Install CVAT
+https://docs.cvat.ai/docs/administration/basics/installation/
